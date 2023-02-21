@@ -8,6 +8,9 @@ If this product is available, a Telegram message will be sent.
 
 To start the project, docker and are required. The installation instructions can be found here.
 
+Pull the docker Image: `docker pull ghcr.io/53845714nf/bluebrixx2telegram/bluebrixx2telegram:latest`
+
+
 Example to start (Change the env values to yours.) :
 
 ```bash
