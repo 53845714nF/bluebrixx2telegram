@@ -11,6 +11,5 @@ RUN pip install -r requirements.txt
 RUN echo "0 9 * * * /app/bluebrixx2telegram.py" >> /var/spool/cron/crontabs/root
 RUN echo "0 12 * * * /app/bluebrixx2telegram.py" >> /var/spool/cron/crontabs/root
 RUN echo "0 18 * * * /app/bluebrixx2telegram.py" >> /var/spool/cron/crontabs/root
-RUN echo "0 15 * * * /app/bluebrixx2telegram.py" >> /var/spool/cron/crontabs/root
 
 CMD crond -f
