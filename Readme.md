@@ -1,7 +1,6 @@
 # Bluebrixx2telegram
 
 ## Description
-
 A scraper for the website `https://www.bluebrixx.com/de/` which checks if a certain product is available.
 If this product is available, a Telegram message will be sent.
 
