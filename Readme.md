@@ -18,7 +18,7 @@ sudo docker run -d \
 -e "PRODUCT_URL=https://www.bluebrixx.com/de/pirates/105326/Gouverneursinsel-Wachturm-Erweiterung-BlueBrixx-Special" \
 -e "TELEGRAM_TOKEN=678901234:bkhuifewhfhewrheulqrkjreqhtiuqweh" \
 -e "TELEGRAM_CHAT_ID=545678900" \
-bluebrixx2telegram
+ghcr.io/53845714nf/bluebrixx2telegram/bluebrixx2telegram
 ```
 
 ## Building your own Image
