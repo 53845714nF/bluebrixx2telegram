@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bluebrixx2telegram"
+version = "0.0.1"
+description = "A telegram-bot that notifies you when a product is available on Bluebrixx."
+readme = "Readme.md"
+requires-python = ">=3.10"
+license = {text = "GNU General Public License v3.0"}
+
+authors = [
+    {name = "Sebastian Feustel"}
+]
+
+dependencies = [
+  "requests>=2.32.3",
+  "beautifulsoup4>=4.12.3",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=6.0",
+    "requests_mock>=1.12.1",
+    "flake8>=3.8",
+    "black>=22.3.0",
+    "isort>=5.0",
+    "tox>=4.0"
+]
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q"
+testpaths = [
+    "tests",
+]
+
+[tool.flake8]
+max-line-length = 130
+extend-ignore = ["E203", "E722"]

@@ -1,15 +1,17 @@
-FROM python:3.9-alpine
+FROM python:3.11-alpine
+
+WORKDIR /app
 
 RUN apk add --no-cache tzdata
 ENV TZ=Europe/Berlin
 
-WORKDIR /app
+COPY pyproject.toml ./
+RUN pip install -e .
 
 COPY /src /app
-RUN pip install -r requirements.txt
 
-RUN echo "0 9 * * * /app/bluebrixx2telegram.py" >> /var/spool/cron/crontabs/root
-RUN echo "0 12 * * * /app/bluebrixx2telegram.py" >> /var/spool/cron/crontabs/root
-RUN echo "0 18 * * * /app/bluebrixx2telegram.py" >> /var/spool/cron/crontabs/root
+RUN echo "0 9 * * * python -m telegram.telegram" >> /var/spool/cron/crontabs/root
+RUN echo "0 12 * * * python -m telegram.telegram" >> /var/spool/cron/crontabs/root
+RUN echo "0 18 * * * python -m telegram.telegram" >> /var/spool/cron/crontabs/root
 
-CMD crond -f
+CMD ["crond", "-f"]
