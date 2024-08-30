@@ -29,7 +29,7 @@ def send_message_to_telegram(token: str, chat_id: str, product_url: str):
         "https://api.telegram.org/bot" + token + "/sendMessage",
         data={
             "chat_id": chat_id,
-            "text": f"Your Bluebrixx product is available: { product_url }",
+            "text": f"Your Bluebrixx product is available: {product_url}",
         },
     )
 
